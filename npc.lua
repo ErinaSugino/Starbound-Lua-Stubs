@@ -1,0 +1,267 @@
+npc = {}
+
+-- Returns the specified local position in world space. ---
+---@param offset Vec2F
+---@return Vec2F
+function npc.toAbsolutePosition(offset)
+    error("not implemented")
+end
+
+-- Returns the species of the npc. ---
+---@return string
+function npc.species()
+    error("not implemented")
+end
+
+-- Returns the gender of the npc ---
+---@return string
+function npc.gender()
+    error("not implemented")
+end
+
+-- Returns the specific humanoid identity of the npc, containing information such
+-- as hair style and idle pose. ---
+---@return table
+function npc.humanoidIdentity()
+    error("not implemented")
+end
+
+-- Returns the npc type of the npc. ---
+---@return string
+function npc.npcType()
+    error("not implemented")
+end
+
+-- Returns the seed used to generate this npc. ---
+---@return integer
+function npc.seed()
+    error("not implemented")
+end
+
+-- Returns the level of the npc. ---
+---@return number
+function npc.level()
+    error("not implemented")
+end
+
+-- Returns the list of treasure pools that will spawn when the npc dies. ---
+---@return string[]
+function npc.dropPools()
+    error("not implemented")
+end
+
+-- Sets the list of treasure pools that will spawn when the npc dies. ---
+---@param pools string[]
+function npc.setDropPools(pools)
+    error("not implemented")
+end
+
+-- Returns the current energy of the npc. Same as `status.resource("energy")` ---
+---@return number
+function npc.energy()
+    error("not implemented")
+end
+
+-- Returns the current energy of the npc. Same as `status.maxResource("energy")`
+-- ---
+---@return number
+function npc.maxEnergy()
+    error("not implemented")
+end
+
+-- Makes the npc say a string. Optionally pass in tags to replace text tags.
+-- Optionally give config options for the chat message. Returns whether the chat
+-- message was successfully added. Available options: ``` { drawBorder = true,
+-- fontSize = 8, color = {255, 255, 255}, sound =
+-- "/sfx/humanoid/avian_chatter_male1.ogg" } ``` ---
+---@param line string
+---@return boolean
+function npc.say(line)
+    error("not implemented")
+end
+
+-- Makes the npc say a line, with a portrait chat bubble. Optionally pass in tags
+-- to replace text tags. Optionally give config options for the chat message.
+-- Returns whether the chat message was successfully added. Available options: ```
+-- { drawMoreIndicator = true, sound = "/sfx/humanoid/avian_chatter_male1.ogg" }
+-- ``` ---
+---@param line string
+---@return boolean
+function npc.sayPortrait(line)
+    error("not implemented")
+end
+
+-- Makes the npc show a facial emote. ---
+---@param emote string
+function npc.emote(emote)
+    error("not implemented")
+end
+
+-- Sets the current dance for the npc. Dances are defined in .dance files. ---
+---@param dance string
+function npc.dance(dance)
+    error("not implemented")
+end
+
+-- Sets whether the npc should be interactive. ---
+---@param interactive boolean
+function npc.setInteractive(interactive)
+    error("not implemented")
+end
+
+-- Sets the npc to lounge in a loungeable. Optionally specify which anchor (seat)
+-- to use. Returns whether the npc successfully lounged. ---
+---@param loungeable EntityId
+---@param anchorIndex integer?
+---@return boolean
+function npc.setLounging(loungeable, anchorIndex)
+    error("not implemented")
+end
+
+-- Makes the npc stop lounging. ---
+function npc.resetLounging()
+    error("not implemented")
+end
+
+-- Returns whether the npc is currently lounging. ---
+---@return boolean
+function npc.isLounging()
+    error("not implemented")
+end
+
+-- Returns the EntityId of the loungeable the NPC is currently lounging in. Returns
+-- nil if not lounging. ---
+---@return EntityId?
+function npc.loungingIn()
+    error("not implemented")
+end
+
+-- Sets the list of quests the NPC will offer. ---
+---@param quests string[]
+function npc.setOfferedQuests(quests)
+    error("not implemented")
+end
+
+-- Sets the list of quests the played can turn in at this npc. ---
+---@param quests string[]
+function npc.setTurnInQuests(quests)
+    error("not implemented")
+end
+
+-- Sets the specified item slot to contain the specified item. Possible equipment
+-- items slots: * head * headCosmetic * chest * chestCosmetic * legs * legsCosmetic
+-- * back * backCosmetic * primary * alt ---
+---@param slot string
+---@param item ItemDescriptor | string
+---@return boolean
+function npc.setItemSlot(slot, item)
+    error("not implemented")
+end
+
+-- Returns the item currently in the specified item slot. ---
+---@param slot string
+---@return ItemDescriptor
+function npc.getItemSlot(slot)
+    error("not implemented")
+end
+
+-- Set whether the npc should not gain status effects from the equipped armor.
+-- Armor will still be visually equipped. ---
+---@param disable boolean
+function npc.disableWornArmor(disable)
+    error("not implemented")
+end
+
+-- Toggles `on` firing the item equipped in the `primary` item slot. ---
+function npc.beginPrimaryFire()
+    error("not implemented")
+end
+
+-- Toggles `on` firing the item equipped in the `alt` item slot. ---
+function npc.beginAltFire()
+    error("not implemented")
+end
+
+-- Toggles `off` firing the item equipped in the `primary` item slot. ---
+function npc.endPrimaryFire()
+    error("not implemented")
+end
+
+-- Toggles `off` firing the item equipped in the `alt` item slot. ---
+function npc.endAltFire()
+    error("not implemented")
+end
+
+-- Sets whether tools should be used as though shift is held. ---
+---@param shifting boolean
+function npc.setShifting(shifting)
+    error("not implemented")
+end
+
+-- Sets whether damage on touch should be enabled. ---
+---@param enabled boolean
+function npc.setDamageOnTouch(enabled)
+    error("not implemented")
+end
+
+-- Returns the current aim position in world space. ---
+---@return Vec2F
+function npc.aimPosition()
+    error("not implemented")
+end
+
+-- Sets the aim position in world space. ---
+---@param position Vec2F
+function npc.setAimPosition(position)
+    error("not implemented")
+end
+
+-- Sets a particle emitter to burst when the npc dies. ---
+---@param emitter string
+function npc.setDeathParticleBurst(emitter)
+    error("not implemented")
+end
+
+-- Sets the text to appear above the npc when it first appears on screen. ---
+---@param status string
+function npc.setStatusText(status)
+    error("not implemented")
+end
+
+-- Sets whether the nametag should be displayed above the NPC. ---
+---@param display boolean
+function npc.setDisplayNametag(display)
+    error("not implemented")
+end
+
+-- Sets whether this npc should persist after being unloaded. ---
+---@param persistent boolean
+function npc.setPersistent(persistent)
+    error("not implemented")
+end
+
+-- Sets whether to keep this npc alive. If true, the npc will never be unloaded as
+-- long as the world is loaded. ---
+---@param keepAlive boolean
+function npc.setKeepAlive(keepAlive)
+    error("not implemented")
+end
+
+-- Sets a damage team for the npc in the format: `{type = "enemy", team = 2}` ---
+---@param damageTeam table
+function npc.setDamageTeam(damageTeam)
+    error("not implemented")
+end
+
+-- Sets whether the npc should be flagged as aggressive. ---
+---@param aggressive boolean
+function npc.setAggressive(aggressive)
+    error("not implemented")
+end
+
+-- Sets a unique ID for this npc that can be used to access it. A unique ID has to
+-- be unique for the world the npc is on, but not universally unique.
+---@param uniqueId string
+function npc.setUniqueId(uniqueId)
+    error("not implemented")
+end

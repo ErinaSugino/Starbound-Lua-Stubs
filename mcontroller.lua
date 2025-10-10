@@ -1,0 +1,260 @@
+mcontroller = mcontroller or {}
+
+-- Returns a table containing the movement parameters for the movement controller.
+-- ---
+---@return table
+function mcontroller.parameters()
+    error("not implemented")
+end
+
+-- Applies the given parameters to the movement controller. The provided parameters
+-- are merged into the current movement parameters. ---
+---@param parameters table
+function mcontroller.applyParameters(parameters)
+    error("not implemented")
+end
+
+-- Resets movement parameters to their original state. ---
+function mcontroller.resetParameters()
+    error("not implemented")
+end
+
+-- Returns the configured mass of the movement controller. ---
+---@return number
+function mcontroller.mass()
+    error("not implemented")
+end
+
+-- Returns the current position of the movement controller. ---
+---@return Vec2F
+function mcontroller.position()
+    error("not implemented")
+end
+
+-- Returns the current horizontal position of the movement controller. ---
+---@return number
+function mcontroller.xPosition()
+    error("not implemented")
+end
+
+-- Returns the current vertical position of the movement controller. ---
+---@return number
+function mcontroller.yPosition()
+    error("not implemented")
+end
+
+-- Returns the current velocity of the movement controller. ---
+---@return Vec2F
+function mcontroller.velocity()
+    error("not implemented")
+end
+
+-- Returns the current horizontal speed of the movement controller. ---
+---@return number
+function mcontroller.xVelocity()
+    error("not implemented")
+end
+
+-- Returns the current vertical speed of the movement controller. ---
+---@return number
+function mcontroller.yVelocity()
+    error("not implemented")
+end
+
+-- Returns the current rotation of the movement controller in radians. ---
+---@return number
+function mcontroller.rotation()
+    error("not implemented")
+end
+
+-- Returns the collision poly of the movement controller, in local coordinates. ---
+---@return PolyF
+function mcontroller.collisionPoly()
+    error("not implemented")
+end
+
+-- Returns the collision poly of the movement controller, in world coordinates. ---
+---@return PolyF
+function mcontroller.collisionBody()
+    error("not implemented")
+end
+
+-- Returns a rect containing the entire collision poly of the movement controller,
+-- in world coordinates. ---
+---@return RectF
+function mcontroller.collisionBoundBox()
+    error("not implemented")
+end
+
+-- Returns a rect containing the entire collision of the movement controller, in
+-- local coordinates. ---
+---@return RectF
+function mcontroller.localBoundBox()
+    error("not implemented")
+end
+
+-- Returns whether the movement controller is currently colliding with world
+-- geometry or a PhysicsMovingCollision. ---
+---@return boolean
+function mcontroller.isColliding()
+    error("not implemented")
+end
+
+-- Returns whether the movement controller is currently colliding with null world
+-- geometry. Null collision occurs in unloaded sectors. ---
+---@return boolean
+function mcontroller.isNullColliding()
+    error("not implemented")
+end
+
+-- Returns whether the movement controller is currently stuck colliding. Movement
+-- controllers can stick if the `stickyCollision` movement parameter is set. ---
+---@return boolean
+function mcontroller.isCollisionStuck()
+    error("not implemented")
+end
+
+-- Returns the angle that the movement controller is currently stuck at, in
+-- radians. ---
+---@return number
+function mcontroller.stickingDirection()
+    error("not implemented")
+end
+
+-- Returns the percentage of the collision poly currently submerged in liquid; ---
+---@return number
+function mcontroller.liquidPercentage()
+    error("not implemented")
+end
+
+-- Returns the liquid ID of the liquid that the movement controller is currently
+-- submerged in. If this is several liquids this returns the most plentiful one.
+-- ---
+---@return LiquidId
+function mcontroller.liquidId()
+    error("not implemented")
+end
+
+-- Returns whether the movement controller is currently on ground. ---
+---@return boolean
+function mcontroller.onGround()
+    error("not implemented")
+end
+
+-- Returns `true` if the movement controller is at a world position without gravity
+-- or if gravity has been disabled. ---
+---@return boolean
+function mcontroller.zeroG()
+    error("not implemented")
+end
+
+-- Returns `true` if the movement controller is touching the bottom or the top
+-- (unless bottomOnly is specified) of the world. ---
+---@param bottomOnly boolean
+---@return boolean
+function mcontroller.atWorldLimit(bottomOnly)
+    error("not implemented")
+end
+
+-- Sets the position of the movement controller. ---
+---@param position Vec2F
+function mcontroller.setPosition(position)
+    error("not implemented")
+end
+
+-- Sets the horizontal position of the movement controller. ---
+---@param x number
+function mcontroller.setXPosition(x)
+    error("not implemented")
+end
+
+-- Sets the vertical position of the movement controller. ---
+---@param y number
+function mcontroller.setYPosition(y)
+    error("not implemented")
+end
+
+-- Moves the movement controller by the vector provided. ---
+---@param direction Vec2F
+function mcontroller.translate(direction)
+    error("not implemented")
+end
+
+-- Sets the velocity of the movement controller. ---
+---@param velocity Vec2F
+function mcontroller.setVelocity(velocity)
+    error("not implemented")
+end
+
+-- Sets the horizontal velocity of the movement controller. ---
+---@param xVelocity Vec2F
+function mcontroller.setXVelocity(xVelocity)
+    error("not implemented")
+end
+
+-- Sets the vertical velocity of the movement controller. ---
+---@param yVelocity Vec2F
+function mcontroller.setYVelocity(yVelocity)
+    error("not implemented")
+end
+
+-- Adds (momentum / mass) velocity to the movement controller. ---
+---@param momentum Vec2F
+function mcontroller.addMomentum(momentum)
+    error("not implemented")
+end
+
+-- Sets the rotation of the movement controller. Angle is in radians. ---
+---@param angle number
+function mcontroller.setRotation(angle)
+    error("not implemented")
+end
+
+-- Rotates the movement controller by an angle relative to its current angle. Angle
+-- is in radians. ---
+---@param angle number
+function mcontroller.rotate(angle)
+    error("not implemented")
+end
+
+-- Accelerates the movement controller by the given acceleration for one tick. ---
+---@param acceleration Vec2F
+function mcontroller.accelerate(acceleration)
+    error("not implemented")
+end
+
+-- Accelerates the movement controller by (force / mass) for one tick. ---
+---@param force Vec2F
+function mcontroller.force(force)
+    error("not implemented")
+end
+
+-- Approaches the targetVelocity using the force provided. If the current velocity
+-- is higher than the provided targetVelocity, the targetVelocity will still be
+-- approached, effectively slowing down the entity. ---
+---@param targetVelocity Vec2F
+function mcontroller.approachVelocity(targetVelocity)
+    error("not implemented")
+end
+
+-- Approaches the targetVelocity but only along the provided angle, not affecting
+-- velocity in the perpendicular axis. If positiveOnly, then it will not slow down
+-- the movementController if it is already moving faster than targetVelocity. ---
+---@param angle number
+function mcontroller.approachVelocityAlongAngle(angle)
+    error("not implemented")
+end
+
+-- Approaches an X velocity. Same as using approachVelocityAlongAngle with angle 0.
+-- ---
+---@param targetVelocity number
+function mcontroller.approachXVelocity(targetVelocity)
+    error("not implemented")
+end
+
+-- Approaches a Y velocity. Same as using approachVelocityAlongAngle with angle (Pi
+-- / 2).
+---@param targetVelocity number
+function mcontroller.approachYVelocity(targetVelocity)
+    error("not implemented")
+end
