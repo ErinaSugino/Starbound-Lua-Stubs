@@ -33,7 +33,7 @@
 --- @alias DamageRequest { damageType: string, damage: number, damageSourceKind: string, sourceEntityId: EntityId }
 --- @alias DamageSource { poly: PolyF, damage: integer, sourceEntity: EntityId, team: DamageTeam, knockback: number, rayCheck: boolean }
 --- @alias Tenant { name: string, priority: integer, species: string | string[], seed: any }
---- @alias ItemDescriptor { name: string }
+--- @alias ItemDescriptor { name: string, item?: string, count?: integer, data?: table, parameters?: table } | { item: string, count?: integer, parameters?: table, data?: table }
 --- @alias Collection { title: string }
 --- @alias Collectable { name: string, icon: any, order: integer }
 --- @alias StatModifier { stat: string, amount: number?, baseMultiplier: number?, effectiveMultiplier: number? }

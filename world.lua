@@ -930,7 +930,7 @@ end
 -- Returns a list of pairs of item descriptors and container positions of all items
 -- in the specified container, or `nil` if the entity is not a container. ---
 ---@param entityId EntityId
----@return [ItemDescriptor, table][]?
+---@return ItemDescriptor[]?
 function world.containerItems(entityId)
     error("not implemented")
 end
@@ -939,7 +939,7 @@ end
 -- specified container, or `nil` if the entity is not a container or the offset is
 -- out of range. ---
 ---@param entityId EntityId
----@return ItemDescriptor
+---@return ItemDescriptor?
 function world.containerItemAt(entityId)
     error("not implemented")
 end
@@ -972,7 +972,7 @@ end
 
 -- Similar to world.containerItems but consumes all items in the container. ---
 ---@param entityId EntityId
----@return table[]
+---@return ItemDescriptor[]?
 function world.containerTakeAll(entityId)
     error("not implemented")
 end
@@ -980,7 +980,7 @@ end
 -- Similar to world.containerItemAt, but consumes all items in the specified slot
 -- of the container. ---
 ---@param entityId EntityId
----@return ItemDescriptor
+---@return ItemDescriptor?
 function world.containerTakeAt(entityId)
     error("not implemented")
 end
@@ -989,7 +989,7 @@ end
 -- to) the specified count of items from the specified slot of the container and
 -- returns only the items consumed. ---
 ---@param entityId EntityId
----@return ItemDescriptor
+---@return ItemDescriptor?
 function world.containerTakeNumItemsAt(entityId)
     error("not implemented")
 end
@@ -1193,8 +1193,9 @@ end
 -- otherwise. If smash is `true` the object will not (by default) drop any items.
 -- ---
 ---@param entityId EntityId
+---@param smash boolean?
 ---@return boolean
-function world.breakObject(entityId)
+function world.breakObject(entityId, smash)
     error("not implemented")
 end
 

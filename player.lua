@@ -61,7 +61,7 @@ end
 -- configuration. Can be used to e.g. open GUI windows normally triggered by player
 -- interaction with entities. ---
 ---@param interactionType string
----@param config table
+---@param config any?
 ---@param sourceEntityId EntityId?
 function player.interact(interactionType, config, sourceEntityId)
     error("not implemented")
@@ -89,14 +89,14 @@ end
 
 -- Teaches the player any recipes which can be used to craft the specified item.
 -- ---
----@param item ItemDescriptor
+---@param item ItemDescriptor | string
 function player.giveBlueprint(item)
     error("not implemented")
 end
 
 -- Returns `true` if the player knows one or more recipes to create the specified
 -- item and `false` otherwise. ---
----@param item ItemDescriptor
+---@param item ItemDescriptor | string
 ---@return boolean
 function player.blueprintKnown(item)
     error("not implemented")
@@ -194,7 +194,7 @@ end
 -- Returns `true` if the player's inventory contains an item matching the specified
 -- descriptor and `false` otherwise. If exactMatch is `true` then parameters as
 -- well as item name must match. ---
----@param item ItemDescriptor
+---@param item ItemDescriptor | string
 ---@param exactMatch boolean?
 ---@return boolean
 function player.hasItem(item, exactMatch)
@@ -204,7 +204,7 @@ end
 -- Returns the total number of items in the player's inventory matching the
 -- specified descriptor. If exactMatch is `true` then parameters as well as item
 -- name must match. ---
----@param item ItemDescriptor
+---@param item ItemDescriptor | string
 ---@return integer
 function player.hasCountOfItem(item)
     error("not implemented")

@@ -33,7 +33,7 @@ end
 -- Returns the value associated with the parameter name in the effect
 -- configuration. If no value is set, returns the default specified. ---
 ---@param name string
----@param def any
+---@param def? any
 ---@return any
 function effect.getParameter(name, def)
     error("not implemented")

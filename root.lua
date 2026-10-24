@@ -102,8 +102,8 @@ end
 
 -- Returns `true` if the given item descriptors match. If exactMatch is `true` then
 -- both names and parameters will be compared, otherwise only names. ---
----@param descriptor1 ItemDescriptor
----@param descriptor2 ItemDescriptor
+---@param descriptor1 ItemDescriptor|string
+---@param descriptor2 ItemDescriptor|string
 ---@param exactMatch boolean?
 ---@return table
 function root.itemDescriptorsMatch(descriptor1, descriptor2, exactMatch)
@@ -112,21 +112,21 @@ end
 
 -- Returns a list of JSON configurations of all recipes which output the given
 -- item. ---
----@param itemName string
+---@param itemName ItemDescriptor|string
 ---@return table[]
 function root.recipesForItem(itemName)
     error("not implemented")
 end
 
 -- Returns the item type name for the specified item. ---
----@param itemName string
+---@param itemName ItemDescriptor|string
 ---@return string
 function root.itemType(itemName)
     error("not implemented")
 end
 
 -- Returns a list of the tags applied to the specified item. ---
----@param itemName string
+---@param itemName ItemDescriptor|string
 ---@return table[]
 function root.itemTags(itemName)
     error("not implemented")
@@ -134,7 +134,7 @@ end
 
 -- Returns true if the given item's tags include the specified tag and false
 -- otherwise. ---
----@param itemName string
+---@param itemName ItemDescriptor|string
 ---@return boolean
 function root.itemHasTag(itemName)
     error("not implemented")
@@ -143,7 +143,7 @@ end
 -- Generates an item from the specified descriptor, level and seed and returns a
 -- JSON object containing the `directory`, `config` and `parameters` for that item.
 -- ---
----@param descriptor ItemDescriptor
+---@param descriptor ItemDescriptor|string
 ---@return table
 function root.itemConfig(descriptor)
     error("not implemented")
@@ -151,7 +151,7 @@ end
 
 -- Generates an item from the specified descriptor, level and seed and returns a
 -- new item descriptor for the resulting item. ---
----@param descriptor ItemDescriptor
+---@param descriptor ItemDescriptor|string
 ---@return ItemDescriptor
 function root.createItem(descriptor)
     error("not implemented")
