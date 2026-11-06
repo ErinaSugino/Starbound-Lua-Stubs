@@ -12,17 +12,19 @@
 --- @alias Vec2I [integer, integer]
 --- @alias Vec3I [integer, integer, integer]
 --- @alias PolyF Vec2F[]
+--- @alias TriF [Vec2F, Vec2F, Vec2F]
 --- @alias RectI [integer, integer, integer, integer]
 --- @alias RectF [number, number, number, number]
 --- @alias Line2F [number, number, number, number]
 --- @alias BehaviorStateData table
---- @alias Color [integer, integer, integer]
+--- @alias Color [integer, integer, integer, integer?]
+--- @alias Color4 [integer, integer, integer, integer]
 --- @alias DamageTeam { type: string, team: integer }
 --- @alias Drawable table
---- @alias CanvasWidget table
 --- @alias ItemBag ItemDescriptor[]
 --- @alias RandomSource table
 --- @alias AStarNode table
+--- @alias TextPosition {position?: Vec2F, horizontalAnchor?: string, verticalAnchor?: string, wrapWidth?: integer, charLimit?: integer}
 
 --- @alias PhysicsCategoryFilter { check: fun(categories: string[]): boolean, type: "Whitelist" | "Blacklist", categories: string[] }
 --- @alias DirectionalForceRegion { boundBox: fun(): RectF, region: PolyF, xTargetVelocity: number?, yTargetVelocity: number?, controlForce: number, translate: fun(pos: Vec2F), categoryFilter: PhysicsCategoryFilter }
@@ -64,3 +66,37 @@
 --- @field failed fun(): boolean
 --- @field result fun(): T?
 --- @field error fun(): any?
+
+--- @class CanvasWidget
+--- @field size fun(): Vec2I
+--- @field clear fun()
+--- @field mousePosition fun(): Vec2I
+--- @field drawImage fun(image: string, position: Vec2F, scale: number?, color: Color4?, centered: boolean?)
+--- @field drawImageDrawable fun(image: string, position: Vec2F, scale: Vec2F|number?, color: Color4?, rotation: number?)
+--- @field drawImageRect fun(texName: string, texCoords: RectF, screenCoords: RectF, color: Color4?)
+--- @field drawTiledImage fun(image: string, offset: Vec2F, screenCoords: RectF, scale: number?, color: Color4?)
+--- @field drawLine fun(begin: Vec2F, end: Vec2F, color: Color4?, lineWidth: number?)
+--- @field drawRect fun(rect: RectF, color: Color4?)
+--- @field drawPoly fun(poly: PolyF, color: Color4?, lineWidth: number?)
+--- @field drawTriangled fun(triangles: TriF[], color: Color4?)
+--- @field drawText fun(text: string, positioning: TextPosition, fontSize: integer, color: Color4?)
+
+--- @class Blackboard
+--- @field get fun(type: string, name: string): any?
+--- @field set fun(type: string, name: string, value: any)
+--- @field getEntity fun(name: string): EntityId?
+--- @field getPosition fun(name: string): Vec2I?
+--- @field getVec2 fun(name: string): Vec2F?
+--- @field getNumber fun(name: string): number?
+--- @field getBool fun(name: string): boolean?
+--- @field getList fun(name: string): any[]?
+--- @field getTable fun(name: string): table?
+--- @field getString fun(name: string): string?
+--- @field setEntity fun(name: string, value: EntityId)
+--- @field setPosition fun(name: string, value: Vec2I)
+--- @field setVec2 fun(name: string, value: Vec2F)
+--- @field setNumber fun(name: string, value: number)
+--- @field setBool fun(name: string, value: boolean)
+--- @field setList fun(name: string, value: any[])
+--- @field setTable fun(name: string, value: table)
+--- @field setString fun(name: string, value: string)
